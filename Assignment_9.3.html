@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spread Operator and destructuring</title>
+<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var evens = [2, 4, 6, 8];//Arrays combined into single array
+		var odds = [1, 3, 5, 7];
+		var primes = [2, 3, 5, 7, 11];
+		var peo = [...primes, ...evens, ...odds];
+		document.write(peo + "<br>");
+
+		var copyprimes = primes.slice(0);//Array from primes copied to another Array
+		document.write(copyprimes + "<br>");
+
+		var jamesBond = { //variable jamesBond destructured
+		first: 'James',
+		last: 'Bond',
+		country: 'United States',
+		city: 'New york',
+		twitter: '@jamesbond'
+		};
+		var {first, last, country, city, twitter} = jamesBond;
+		document.write(first + "<br>", last + "<br>", country + "<br>", city + "<br>", twitter + "<br>");
+
+		var players = ['paul', 'andy', 'darrell', 'jim']; //Array destructured into variables
+		var player1 = players[0];
+		var player2 = players[1];
+		var player3 = players[2];
+		var player4 = players[3];
+		document.write(player1 + "<br>", player2 + "<br>", player3 + "<br>", player4);
+	</script>
+</body>
+</html>
